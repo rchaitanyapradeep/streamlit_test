@@ -1,0 +1,11 @@
+services:
+- type: web
+  name: iris-flask-api
+  env: python
+  buildCommand: "pip install -r requirements.txt"
+  startCommand: "streamlit run streamlit_app.py"
+  envVars:
+  - key: STREAMLIT_ENV
+    value: production
+  - key: PORT
+    value: "8501"
